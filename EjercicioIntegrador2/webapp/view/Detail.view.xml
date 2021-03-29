@@ -1,0 +1,20 @@
+<mvc:View controllerName="EjercicioIntegrador2.EjercicioIntegrador2.controller.Detail" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form" xmlns:core="sap.ui.core">
+	
+    <Page id="detail" title="{i18n>detailTitle}" backgroundDesign="Solid" class="sapUiStdPage">
+        <content>   
+            <core:Fragment fragmentName="EjercicioIntegrador2.EjercicioIntegrador2.fragments.Detail_PanelHeader" type="XML" id="pHeader"/>
+		
+            <core:Fragment fragmentName="EjercicioIntegrador2.EjercicioIntegrador2.fragments.Detail_Tabs" type="XML" id="tabBar"/>
+            
+		</content>
+        <footer>
+			<Toolbar>
+				<ToolbarSpacer/>
+				<Button type="Emphasized" text="Edit" press="onPress" class="sapUiSmallMarginEnd" />
+				<Button text="Delete" press="" class="sapUiSmallMarginEnd"/>
+                <Button text="Copy" press="" class="sapUiSmallMarginEnd" />
+			</Toolbar>
+		</footer>
+	</Page>
+
+</mvc:View>

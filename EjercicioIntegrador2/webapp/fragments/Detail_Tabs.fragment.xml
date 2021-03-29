@@ -1,0 +1,45 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form">
+	
+    <IconTabBar
+    id="idDetailTabBar"
+    class="sapUiResponsiveContentPadding"
+    select="onSelect">
+        <items>
+
+            <IconTabFilter
+            text="{i18n>GeneralInformation}"
+            key="info">
+               <VBox >
+                <Label text="{i18n>Nombre}" class="sapUiTinyMargin"/>
+                <Text text="{productoSeleccionado>/ProductName}" class="sapUiTinyMargin"/>
+
+                <Label text="{i18n>Description}" class="sapUiTinyMargin"/>
+                <Text text="{modelCategory>/Description}" class="sapUiTinyMargin"/> 
+               
+               </VBox>
+            </IconTabFilter>
+
+            <IconTabFilter
+            text="{i18n>Supplier}"
+            key="supplier">
+                <VBox >
+                <Label text="{i18n>Company}" class="sapUiTinyMargin"/>
+                <Text text="{modelSupplier>/CompanyName}" class="sapUiTinyMargin"/>
+
+                <Label text="{i18n>Contact}" class="sapUiTinyMargin"/>
+                <Text text="{modelSupplier>/ContactName}, {modelSupplier>/ContactTitle}" class="sapUiTinyMargin"/> 
+
+                <Label text="{i18n>Contact Number}" class="sapUiTinyMargin"/>
+                <Text text="{modelSupplier>/Phone}" class="sapUiTinyMargin"/>
+
+                <Label text="{i18n>Location}" class="sapUiTinyMargin"/>
+                <Text text="{modelSupplier>/Address}, {modelSupplier>/City}, {modelSupplier>/Country}" class="sapUiTinyMargin"/>
+               
+               </VBox>
+               
+            </IconTabFilter>
+
+        </items>
+    </IconTabBar>
+
+</core:FragmentDefinition>

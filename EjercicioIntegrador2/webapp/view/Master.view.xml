@@ -1,0 +1,19 @@
+<mvc:View controllerName="EjercicioIntegrador2.EjercicioIntegrador2.controller.Master" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m"  xmlns:core="sap.ui.core">
+	
+    <Page id="master" title="{i18n>masterTitle}" backgroundDesign="List" class="sapUiStdPage">
+		<List id="idList" mode="SingleSelectMaster" itemPress=".onListItemPress" items="{modelProducts>/value}">
+			<headerToolbar>
+				<OverflowToolbar width="100%">
+                	<content> 
+						<SearchField width="100%" placeholder="{i18n>masterPlaceholder}" liveChange="onSearch"></SearchField>
+					</content>
+				</OverflowToolbar>
+			</headerToolbar>
+			<items>
+				<StandardListItem title="{modelProducts>ProductName}" 
+                info="{path: 'modelProducts>UnitPrice', formatter: '.Formatter.formatPrice'} USD" type="Active"/>
+			</items>
+		</List>
+	</Page>
+
+</mvc:View>

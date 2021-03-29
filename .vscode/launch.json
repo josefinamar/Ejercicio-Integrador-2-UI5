@@ -1,0 +1,25 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Run EjercicioIntegrador2-EjercicioIntegrador2",
+      "type": "node",
+      "request": "launch",
+      "program": "${workspaceFolder}/ejerciciointegrador2-approuter/node_modules/@sap/html5-repo-mock/index.js",
+      "args": [
+        "--standalone",
+        "/EjercicioIntegrador2EjercicioIntegrador2/index.html",
+        "--ui5",
+        "{\"version\":\"1.87.1\"}"
+      ],
+      "cwd": "${workspaceFolder}/EjercicioIntegrador2",
+      "env": {
+        "PORT": "6004",
+        "MOCK_LOOKUP_DIRS": "[\"webapp\"]",
+        "run.config": "{\"handlerId\":\"ui5_run_config_handler_id\",\"runnableId\":\"/home/user/projects/EjercicioIntegrador2/EjercicioIntegrador2\"}"
+      },
+      "envFile": "${workspaceFolder}/EjercicioIntegrador2/.env1",
+      "preLaunchTask": "Build EjercicioIntegrador2"
+    }
+  ]
+}
