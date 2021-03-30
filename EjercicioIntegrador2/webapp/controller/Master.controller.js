@@ -36,6 +36,7 @@ sap.ui.define([
                 const oComponent = this.getOwnerComponent();
                 oComponent.setModel(oModelProducts, Constants.models.MODEL_PRODUCTS.name);
 
+
                 //-------- Seteo el value 0 de la lista de items del modelo modelProducts para que lo guarde en el modelo productoSeleccionado y cargue esos datos en el Detail al iniciar la app
                 if (!Device.system.phone) {
                     var oProductoSelec = oModelProducts.getProperty("/value/0");
@@ -45,7 +46,7 @@ sap.ui.define([
 
                     this.getOwnerComponent().setModel(oModelProdSelec, Constants.models.MODEL_PRODUCT_SELEC.name);
                 }
-
+                
                 //-----------Guarda la la cantidad de items (del modelProducts) en el modelContadorProductos para poder mostrarla al inicio en el nombre de la lista en el Master.
                 var oItems = oModelProducts.getData();
                 oItems = oItems.value.length;
@@ -92,6 +93,7 @@ sap.ui.define([
 
 
             //-----------Función que se ejecuta al seleccionar un item de la lista de productos, actualiza los datos del modelo productoSeleccionado para que se puedan mostrar en el Detail.
+
             onListItemPress: function (oEvent) {
                 var sProductId = oEvent.getSource().getSelectedItem().getBindingContext(Constants.models.MODEL_PRODUCTS.name).getPath();
 
@@ -104,7 +106,7 @@ sap.ui.define([
 
                 this.getOwnerComponent().setModel(oModelProdSelec, Constants.models.MODEL_PRODUCT_SELEC.name);
 
-                // ----------------Guarda su ID para pasarselo a la funcion de Category y Supplier
+                // --------Guarda su ID para pasarselo a la funcion de Category y Supplier
 
                 var oProductoID = oModel.getProperty(sProductId + "/ProductID");
 
@@ -114,7 +116,7 @@ sap.ui.define([
             },
 
 
-            //-------------Función que ejecuta los filtros por nombre y precio en el searchfield de la lista de productos, actualiza el length de la lista de items y con eso el modelContadorProductos
+            //--------Función que ejecuta los filtros por nombre y precio en el searchfield de la lista de productos, actualiza el length de la lista de items y con eso el modelContadorProductos
             onSearch: function (oEvent) {
 
                 var sQuery = oEvent.getSource().getValue();
@@ -132,7 +134,7 @@ sap.ui.define([
                 var oBindingInfo = oList.getBinding("items");
                 oBindingInfo.filter(oFilters, Constants.objects.FILTERS.name);
 
-                //------------Actualiza la cantidad de items en el modelContadorProductos.
+                //----------Actualiza la cantidad de items en el modelContadorProductos.
 
                 var oItems = oList.getItems().length;
                 var oContador = new JSONModel();
