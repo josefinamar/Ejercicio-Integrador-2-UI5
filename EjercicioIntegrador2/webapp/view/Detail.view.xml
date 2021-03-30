@@ -10,9 +10,9 @@
         <footer>
 			<Toolbar>
 				<ToolbarSpacer/>
-				<Button type="Emphasized" text="Edit" press="onPress" class="sapUiSmallMarginEnd" />
-				<Button text="Delete" press="" class="sapUiSmallMarginEnd"/>
-                <Button text="Copy" press="" class="sapUiSmallMarginEnd" />
+				<Button type="Emphasized" text="{i18n>detailBtnEdit}" press="onPress" class="sapUiSmallMarginEnd" />
+				<Button text="{i18n>detailBtnDelete}" press="onPressDelete" class="sapUiSmallMarginEnd"/>
+                <Button text="{i18n>detailBtnCopy}" press="onPressCopy" class="sapUiSmallMarginEnd" />
 			</Toolbar>
 		</footer>
 	</Page>

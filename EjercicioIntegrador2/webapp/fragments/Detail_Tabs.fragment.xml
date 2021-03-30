@@ -1,4 +1,4 @@
-<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form">
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
 	
     <IconTabBar
     id="idDetailTabBar"
@@ -7,32 +7,32 @@
         <items>
 
             <IconTabFilter
-            text="{i18n>GeneralInformation}"
+            text="{i18n>detailTabGrlInfo}"
             key="info">
                <VBox >
-                <Label text="{i18n>Nombre}" class="sapUiTinyMargin"/>
+                <Label text="{i18n>detailGrlInfoName}" class="sapUiTinyMarginBeginEnd sapUiTinyMarginTop"/>
                 <Text text="{productoSeleccionado>/ProductName}" class="sapUiTinyMargin"/>
 
-                <Label text="{i18n>Description}" class="sapUiTinyMargin"/>
+                <Label text="{i18n>detailGrlInfoDesc}" class="sapUiTinyMarginBeginEnd sapUiSmallMarginTop"/>
                 <Text text="{modelCategory>/Description}" class="sapUiTinyMargin"/> 
                
                </VBox>
             </IconTabFilter>
 
             <IconTabFilter
-            text="{i18n>Supplier}"
+            text="{i18n>detailTabSupplier}"
             key="supplier">
                 <VBox >
-                <Label text="{i18n>Company}" class="sapUiTinyMargin"/>
+                <Label text="{i18n>detailSupplierCompany}" class="sapUiTinyMarginBeginEnd sapUiTinyMarginTop"/>
                 <Text text="{modelSupplier>/CompanyName}" class="sapUiTinyMargin"/>
 
-                <Label text="{i18n>Contact}" class="sapUiTinyMargin"/>
+                <Label text="{i18n>detailSupplierContact}" class="sapUiTinyMarginBeginEnd sapUiSmallMarginTop"/>
                 <Text text="{modelSupplier>/ContactName}, {modelSupplier>/ContactTitle}" class="sapUiTinyMargin"/> 
 
-                <Label text="{i18n>Contact Number}" class="sapUiTinyMargin"/>
+                <Label text="{i18n>detailSupplierContactNmbr}" class="sapUiTinyMarginBeginEnd sapUiSmallMarginTop"/>
                 <Text text="{modelSupplier>/Phone}" class="sapUiTinyMargin"/>
 
-                <Label text="{i18n>Location}" class="sapUiTinyMargin"/>
+                <Label text="{i18n>detailSupplierLocation}" class="sapUiTinyMarginBeginEnd sapUiSmallMarginTop"/>
                 <Text text="{modelSupplier>/Address}, {modelSupplier>/City}, {modelSupplier>/Country}" class="sapUiTinyMargin"/>
                
                </VBox>

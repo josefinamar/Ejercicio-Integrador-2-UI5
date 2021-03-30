@@ -1,11 +1,13 @@
 <mvc:View controllerName="EjercicioIntegrador2.EjercicioIntegrador2.controller.Master" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m"  xmlns:core="sap.ui.core">
 	
-    <Page id="master" title="{i18n>masterTitle}" backgroundDesign="List" class="sapUiStdPage">
+    <Page id="master" title="{i18n>masterTitle} ({modelContadorProductos>/})" backgroundDesign="List" class="sapUiStdPage">
 		<List id="idList" mode="SingleSelectMaster" itemPress=".onListItemPress" items="{modelProducts>/value}">
 			<headerToolbar>
 				<OverflowToolbar width="100%">
                 	<content> 
-						<SearchField width="100%" placeholder="{i18n>masterPlaceholder}" liveChange="onSearch"></SearchField>
+						<SearchField width="80%" placeholder="{i18n>masterPlaceholder}" liveChange="onSearch"></SearchField>
+
+                        <Button width="10%" tooltip="{i18n>masterOrderBtn}" icon="sap-icon://sort" press=".onSort"/>
 					</content>
 				</OverflowToolbar>
 			</headerToolbar>

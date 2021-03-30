@@ -1,9 +1,8 @@
-<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form">
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" >
 
-    <Panel expandable="true" headerText="{productoSeleccionado>/ProductName}" width="auto" class="sapUiResponsiveMargin">
+    <Panel id="idPanelDetail" expandable="true" headerText="{productoSeleccionado>/ProductName}" width="auto" class="sapUiResponsiveMargin">
 		
 			<ObjectHeader
-	    	binding="{productoSeleccionado}"
 	    	title="{productoSeleccionado>/ProductName}"
 	    	number="{ parts:[{path:'productoSeleccionado>/UnitPrice'},{path:'CurrencyCode'}],
             type: 'sap.ui.model.type.Currency',
@@ -25,7 +24,7 @@
 							formatter: '.Formatter.formatStockState'
 						}" />
                 </statuses>
-                <ObjectAttribute text="Category: {modelCategory>/CategoryName}" />
+                <ObjectAttribute text="{i18n>detailPanelCategory}: {modelCategory>/CategoryName}" />
             </ObjectHeader>
 		
 	</Panel>
